@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qmVMW8IUWOyAhBWAQCJsY+MpoLtXLQjfYqRj9MHOU7fGKMEmVPEmnzbVhktipAD0zSEPsPX/9h4fqmo2P3cojg==",
+  "success": true,
+  "projectFilePath": "/home/user/Рабочий стол/krest/csharp/csharp.csproj",
+  "expectedPackageFiles": [
+    "/home/user/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,90 @@
+1. Download and install Node.js
+2. Выбрать директорию, где будем работать
+3. Иницилизируем работу с Node.js(далее NPM)
+   Вводим команду: npm init
+
+*В name укажем ФИО студентов латиницей: пробелы заменить
+нижним подчеркиванием
+*Остальные параметры - Enter
+
+4. Установить mocha(пакет для настройки тестов)
+npm install mocha --save-dev
+
+5. Создадим директорию src; создадим файл src/operations.js
+mkdir src
+touch src/operations.js
+
+6. Откроем файл src/operations.js; добавим код:
+
+module.exports.multiply = function(x,y){return x * y;}
+module.exports.add = function(x, y){ return x + y;}
+
+
+module.exports.divider = function(x,y){return x / y;}
+module.exports.subber= function(x, y){ return x - y;}
+
+module.exports.power = function(x,y){return x**y;}
+
+module.exports.bitAND= function(x, y){ return x & y;}
+module.exports.bitOR= function(x, y){ return x | y;}
+module.exports.bitXOR= function(x, y){ return x ^ y;}
+
+
+module.exports.isEqual= function(x, y){ return x == y;}
+
+module.exports.isIntegerMultiply= function(x, y){ return Number.isInteger(x*y);}
+module.exports.isIntegerAdd= function(x, y){ return Number.isInteger(x+y);}
+module.exports.isIntegerDivider= function(x, y){ return Number.isInteger(x/y);}
+module.exports.isIntegerSubber= function(x, y){ return Number.isInteger(x-y);}
+module.exports.isIntegerPower=function(x, y){ return Number.isInteger(x**y);}
+
+
+7. Cоздадим файл src/operations.test.js
+touch src/operations.test.js
+
+8. Откроем файл src/operations.test.js; добавим код:
+
+var operations = require("./operations");
+ 
+it("should multiply two numbers", function(){
+     
+    var expectedResult = 15;
+    var result = operations.multiply(3, 5);
+    if(result!==expectedResult){
+        throw new Error(`Expected ${expectedResult}, but got ${result}`);
+    }
+});
+
+9.  Откроем/изменим файл package.json секцию scripts
+следующим образом:
+  "scripts":{
+    "test" : "mocha src/*.test.js"
+  },
+10. Запустим тест:
+npm run test
+
+11. Самостоятельная работа:
+Использованные источники:
+https://metanit.com/web/nodejs/5.1.php
+используя данный источник и метод.указания, 
+разработать тесты для функций:
+operations.add
+
+
+operations.divider 
+operations.subber
+
+operations.power
+
+operations.bitAND
+operations.bitOR
+operations.bitXOR
+
+
+operations.isEqual
+
+operations.isIntegerMultiply
+operations.isIntegerAdd
+operations.isIntegerDivider
+operations.isIntegerSubber
+operations.isIntegerPower

@@ -1,0 +1,33 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"name": "Tomas"
+		},
+		{
+			"id": 2,
+			"name": "Jacky666"
+		},
+		{
+			"id": 3,
+			"name": "MyAwesome Temp"
+		}
+	],
+	"contacts":[
+		{
+			"id": 101,
+			"id_user": 1,
+			"phone":"82134545124"
+		},
+		{
+			"id": 102,
+			"id_user": 2,
+			"phone":"82111111111"
+		},
+		{
+			"id": 103,
+			"id_user": 3,
+			"phone":"86666645125"
+		}
+	]
+}

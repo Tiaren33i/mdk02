@@ -1,0 +1,15 @@
+/home/user/Рабочий стол/krest/csharp/obj/Debug/net6.0/csharp.csproj.AssemblyReference.cache
+/home/user/Рабочий стол/krest/csharp/obj/Debug/net6.0/csharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/Рабочий стол/krest/csharp/obj/Debug/net6.0/csharp.AssemblyInfoInputs.cache
+/home/user/Рабочий стол/krest/csharp/obj/Debug/net6.0/csharp.AssemblyInfo.cs
+/home/user/Рабочий стол/krest/csharp/obj/Debug/net6.0/csharp.csproj.CoreCompileInputs.cache
+/home/user/Рабочий стол/krest/csharp/bin/Debug/net6.0/csharp
+/home/user/Рабочий стол/krest/csharp/bin/Debug/net6.0/csharp.deps.json
+/home/user/Рабочий стол/krest/csharp/bin/Debug/net6.0/csharp.runtimeconfig.json
+/home/user/Рабочий стол/krest/csharp/bin/Debug/net6.0/csharp.dll
+/home/user/Рабочий стол/krest/csharp/bin/Debug/net6.0/ref/csharp.dll
+/home/user/Рабочий стол/krest/csharp/bin/Debug/net6.0/csharp.pdb
+/home/user/Рабочий стол/krest/csharp/obj/Debug/net6.0/csharp.dll
+/home/user/Рабочий стол/krest/csharp/obj/Debug/net6.0/ref/csharp.dll
+/home/user/Рабочий стол/krest/csharp/obj/Debug/net6.0/csharp.pdb
+/home/user/Рабочий стол/krest/csharp/obj/Debug/net6.0/csharp.genruntimeconfig.cache

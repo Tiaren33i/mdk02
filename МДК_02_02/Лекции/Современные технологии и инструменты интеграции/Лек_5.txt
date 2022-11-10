@@ -1,0 +1,118 @@
+//https://metanit.com/web/nodejs/4.11.php
+//https://metanit.com/web/nodejs/4.1.php
+1. Download and install Node.js
+2. Выбрать директорию, где будем работать
+3. Иницилизируем работу с Node.js(далее NPM)
+   Вводим команду: npm init
+6.Установить body-parser( ):
+	Вводим команду:
+	5а: npm install body-parser --dev
+	5б: npm i body-parser --dev
+7.Установить express():
+	Вводим команду:
+	5а: npm install express --dev
+	5б: npm i express --dev
+8.
+9. Открыл файл package.json; перешел в 
+вкладку scripts; меняю на: 
+	....
+	"scripts": {
+    "start": "node ./dist/server.js"
+  }
+  .....
+10.
+Создадим файл data.json; добавим данные:
+
+{
+	"users": [
+		{
+			"id": 1,
+			"name": "Tomas"
+		},
+		{
+			"id": 2,
+			"name": "Jacky666"
+		},
+		{
+			"id": 3,
+			"name": "MyAwesome Temp"
+		}
+	],
+	"contacts":[
+		{
+			"id": 101,
+			"id_user": 1,
+			"phone":"82134545124"
+		},
+		{
+			"id": 102,
+			"id_user": 2,
+			"phone":"82111111111"
+		},
+		{
+			"id": 103,
+			"id_user": 3,
+			"phone":"86666645125"
+		}
+	]
+}
+
+11.Cоздание файла dist/server.js; Введем данные:
+const express = require("express");
+ 
+const app = express();
+app.get("/", function(request, response){
+     
+    response.send("<h1>Главная страница</h1>");
+});
+app.get("/users", function(request, response){
+     
+    response.send("<h1>О сайте</h1>");
+});
+app.get("/contacts", function(request, response){
+     
+    response.send("<h1>Контакты</h1>");
+});
+app.listen(3000);
+ 
+
+
+14. Запустим сервер:
+Вводим команду:
+	npm run start
+15. Изменим файл dist/server.js
+
+const express = require("express");
+var bodyParser = require("body-parser");
+var fs = require("fs");
+
+
+const app = express();
+var jsonParser = bodyParser.json();
+ 
+app.use(express.static(__dirname));
+
+app.get("/", function(request, response){
+    var content = fs.readFileSync("dist/data.json", "utf8");
+    var all = JSON.parse(content);
+
+    response.send(all);
+});
+app.get("/users", function(request, response){
+    var content = fs.readFileSync("dist/data.json", "utf8");
+    var all = JSON.parse(content);
+
+    response.send(all.users); 
+ //   response.send("<h1>О сайте</h1>");
+});
+app.get("/contacts", function(request, response){
+    var content = fs.readFileSync("dist/data.json", "utf8");
+    var all = JSON.parse(content);
+    response.send(all.contacts); 
+ //   response.send("<h1>Контакты</h1>");
+});
+app.listen(3000);
+
+14. Запустим сервер:
+Вводим команду:
+	npm run start

@@ -1,0 +1,112 @@
+Работа с webpack:
+
+1. Download and install Node.js
+2. Выбрать директорию, где будем работать
+3. Иницилизируем работу с Node.js(далее NPM)
+   Вводим команду: npm init
+4. Установить webpack(интерфейс по умолчанию):
+	Вводим команду:
+	4а: npm install webpack --save-dev
+	4б: npm i webpack --save-dev
+5. Установить webpack(комадный интерфейс):
+	Вводим команду:
+	5а: npm install webpack-cli --save-dev
+	5б: npm i webpack-cli --save-dev
+6. Открыл файл package.json; перешел в 
+вкладку scripts; меняю на: 
+	....
+	"scripts": {
+    "build": "webpack"
+  }
+  .....
+7.
+Примечание: Сейчас при запуске webpack выведется
+ошибка, т.к. нет файла src/index.js
+НАДО: создать файл src/index.js
+8. Запускаем построение проекта:
+	Вводим команду:
+	npm run build
+Ожидаемый результат: 
+Cоздание файла dist/main.js
+9. Создадим два файла: 
+    src/magazin.js
+	src/distance.js
+Внутрь src/distance.js пропишем функцию:
+///
+let sumAB=(a,b)=>{return a+b;}//secret!!!!
+let resAB=()=>{return sumAB(1,2)+sumAB(2,3);}
+
+///
+
+10. Эскпортируем в src/distance.js 
+	функцию resAB:
+В конец файла src/distance.js добавляем строку:
+
+....	
+export default resAB;
+
+11. Внутрь src/magazin.js пропишем:
+///
+let s=resAB();
+///
+12. В начало файла src/magazin.js 
+	импортируем/скачаем	функцию resAB из 
+	файла src/distance.js
+	
+	import resAB from './distance.js';
+	....
+13. В начало файла src/index.js 
+	импортируем/скачаем ВЕСЬ код из файла
+	src/magazin.js:
+	////
+	require('./magazin.js');
+	////
+14. Запускаем построение проекта:
+	Вводим команду:
+	npm run build
+Ожидаемый результат: 
+	Перезапись файла dist/main.js
+	
+15. Создаем конфигурационный файл webpack.config.js
+16. Вписываем стандартную конфигурацию в
+webpack.config.js :
+////
+let path=require('path');
+
+let conf={
+	entry:'./src/index.js',
+	output:{
+		path:path.resolve(__dirname,'./dist'),
+		filename:'main.js',
+		publicPath:'dist/'
+	},
+};
+module.exports=conf;
+///
+17. Запускаем построение проекта:
+	Вводим команду:
+	npm run build
+Ожидаемый результат: 
+	Перезапись файла dist/main.js
+
+18. Установить file-loader(интерфейс по умолчанию):
+	Вводим команду:
+	18а: npm install file-loader --save-dev
+	18б: npm i file-loader --save-dev
+
+19. В файл webpack.config.js  
+	добавляем настройку модуля:
+.....
+ module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+    ],
+  },
+ };//Здесь Конец Файла

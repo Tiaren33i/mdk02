@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.container{
+    margin:0 auto;
+    width: 90%;
+    font-family: 'Abel', sans-serif;
+    font-size: 24px;;
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "AWzcnwsj9Yk9HDc+Iv/eRhIMtSb0phTp5Loo3x3BchCwVSU41vQK9xwuM9aSUxJtf0mopa907B3apfJziiSGXQ==",
+  "success": true,
+  "projectFilePath": "/home/user/Документы/share/GREAT/2ИСП/МДК_02_02/Практика/ПР_6/examples/csharp/csharp.csproj",
+  "expectedPackageFiles": [
+    "/home/user/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
